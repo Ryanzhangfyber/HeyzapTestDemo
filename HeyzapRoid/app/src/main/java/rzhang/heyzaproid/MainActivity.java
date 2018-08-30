@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //HeyzapAds.setGdprConsent(false,this);
+        HeyzapAds.setGdprConsent(false,this);
         //Log.d("TAG","This line is setting GDPR as false-1");
 
         if(HeyzapAds.hasStarted()) {
