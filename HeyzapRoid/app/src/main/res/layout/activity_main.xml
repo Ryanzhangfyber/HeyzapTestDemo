@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rzhang.heyzaproid.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/native_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="128dp">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="310dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/icon_image" />
+
+        <ImageView
+            android:id="@+id/content_image"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_above="@+id/button_CTA"
+            app:srcCompat="@drawable/common_full_open_on_phone"
+            android:layout_below="@+id/body"/>
+
+        <ImageView
+            android:id="@+id/icon_image"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+        <Button
+            android:id="@+id/button_CTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_ui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/button_TestUI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TestUI" />
+
+        <Button
+            android:id="@+id/button_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RequestRV" />
+
+        <Button
+            android:id="@+id/button_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ShowRV" />
+
+        <Button
+            android:id="@+id/button_r_Interstitial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RequestInter" />
+
+        <Button
+            android:id="@+id/button_s_Interstitial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ShowInter" />
+
+        <Button
+            android:id="@+id/button_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banner" />
+
+        <Button
+            android:id="@+id/button_loadNativeAds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LoadNativeAds" />
+
+        <FrameLayout
+            android:id="@+id/banner_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom">
+        </FrameLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "rzhang.heyzaproid"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/heyzap-ads-sdk-9.22.0.jar')
+    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation(name: 'unityads-sdk-2.2.1', ext: 'aar')
+    implementation(name: 'AudienceNetwork', ext: 'aar')
+    implementation(name: 'adcolony-sdk-3.3.4', ext: 'aar')
+    implementation(name: 'fyber-sdk-8.21.0', ext: 'aar')
+    implementation files('libs/applovin-sdk-8.0.1.jar')
+    implementation files('libs/chartboost-sdk-7.2.0.jar')
+    implementation files('libs/adapter-rxjava-2.2.0.jar')
+    implementation files('libs/ironsource-sdk-6.7.9.jar')
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+}
